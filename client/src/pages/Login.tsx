@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 function Login() {
 
@@ -48,9 +49,18 @@ function Login() {
           </div>
 
           <div className="px-12 container">
-            <button className="w-full rounded-full text-white text-sm tracking-wider border border-gray-500 hover:bg-gray-700 p-3 mb-3">Login with Facebook</button>
+            <button
+              className="w-full rounded-full text-white text-sm tracking-wider border border-gray-500 hover:bg-gray-700 p-3 mb-3"
+            >
+              Login with Facebook
+            </button>
 
-            <button className="w-full rounded-full text-blue-500 font-medium tracking-wider font-sans text-sm  hover:bg-gray-700 border border-blue-500 p-3 mb-5">Create new account</button>
+            <Link
+            to='/accounts/emailsignup'
+              className="w-full block rounded-full text-center text-blue-500 font-medium tracking-wider font-sans text-sm  hover:bg-gray-700 border border-blue-500 p-3 mb-5"
+            >
+              Create new account
+            </Link>
 
             <div className="mx-auto">
               <svg aria-label="Meta logo" className="x1kpxq89 x1247r65 w-15 h-auto block mx-auto" role="img" viewBox="0 0 500 100">

@@ -2,6 +2,7 @@ import Footer from '@/components/Footer';
 import { months } from '@/data/links.ts'
 import { FaRegCircleQuestion } from "react-icons/fa6";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 function Register() {
 
@@ -154,9 +155,19 @@ function Register() {
           </div>
 
           {/* Buttons */}
-          <button className='bg-blue-600 text-white text-bold text-xs rounded-full hover:bg-blue-500 p-3 mb-3'>Submit</button>
+          <Link
+            to=''
+            className='bg-blue-600 text-white text-center text-bold text-xs rounded-full hover:bg-blue-500 p-3 mb-3'
+          >
+            Submit
+          </Link>
 
-          <button className='border border-gray-600 text-white text-bold text-xs rounded-full hover:bg-gray-900 p-3'>I already have an account</button>
+          <Link
+            to='/accounts/login'
+            className='border border-gray-600 text-white text-center text-bold text-xs rounded-full hover:bg-gray-900 p-3'
+          >
+            I already have an account
+          </Link>
 
         </div>
       </section>
