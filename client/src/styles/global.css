@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-popins: "Poppins"
+  --font-popins: "Poppins";
+  --color-darkbg: #0c1014;
 }
 
 @layer base {
@@ -9,7 +10,15 @@
     scroll-behavior: smooth;
     @apply font-popins;
   }
+
   button {
     cursor: pointer;
+  }
+
+  /* avoid autofill background color */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-text-fill-color: #d4d4d4;
+    transition: background-color 5000s ease-in-out;
   }
 }

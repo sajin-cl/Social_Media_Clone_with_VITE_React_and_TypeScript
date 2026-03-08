@@ -3,7 +3,7 @@ function Login() {
   return (
     <section id="login" className="min-h-screen flex relative">
       {/* Left Section */}
-      <div className="left-side hidden lg:block w-1/2 bg-black  justify-center items-center ">
+      <div className="left-side hidden lg:block w-1/2 bg-darkbg  justify-center items-center ">
         <div className="w-full  p-5 m-8">
           <img src="/insta_logo.svg" alt="insta_log0" width={80} />
         </div>
@@ -22,7 +22,8 @@ function Login() {
       <div className="right-side w-full lg:w-1/2 bg-gray-800 border-l border-gray-500">
         <div className="container flex flex-col jufify-center p-12">
           <span className="text-white fw-bold mb-5">Log into Instagram</span>
-          <form action="">
+
+          <form action="" method="post">
 
             <input type="text"
               name="name"
@@ -59,6 +60,7 @@ function Login() {
         </div>
       </div>
     </section >
+    
   )
 };
 

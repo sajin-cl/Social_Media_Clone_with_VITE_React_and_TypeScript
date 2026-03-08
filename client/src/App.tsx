@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Login from "./pages/Login"
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <>
 
       <Login />
-
+      <Footer/>
     </>
   )
 }
