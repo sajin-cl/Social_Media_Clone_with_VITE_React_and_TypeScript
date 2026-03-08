@@ -1,5 +1,6 @@
+import type { FooterLinks } from "@/types/indes.ts";
 
-export const footerLinks = [
+export const footerLinks: FooterLinks[] = [
   { id: 1, name: 'Meta' },
   { id: 2, name: 'About' },
   { id: 3, name: 'Blog' },
@@ -12,5 +13,19 @@ export const footerLinks = [
   { id: 10, name: 'social media lite' },
   { id: 11, name: 'Contact Uploading & Non-Users' },
   { id: 12, name: 'Beta Verified' },
+];
 
+export const months: string[] = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
 ];
