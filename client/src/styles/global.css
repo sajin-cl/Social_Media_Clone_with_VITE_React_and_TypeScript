@@ -11,6 +11,30 @@
     @apply font-popins;
   }
 
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #0c0a09;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* carousel hide scrollbar */
+  .carousel-scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   button {
     cursor: pointer;
   }
