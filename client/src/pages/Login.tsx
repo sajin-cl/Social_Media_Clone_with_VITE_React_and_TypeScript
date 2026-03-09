@@ -1,7 +1,9 @@
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -43,7 +45,13 @@ function Login() {
 
               <button className="w-full rounded-full bg-blue-600 text-white text-sm p-3 mb-3">Login</button>
 
-              <button className="w-full rounded-full hover:bg-gray-700 text-white text-sm p-3 mb-3">Forget Password?</button>
+              <button
+                type="button"
+                className="w-full rounded-full hover:bg-gray-700 text-white text-sm p-3 mb-3"
+                onClick={() => { navigate('/accounts/password/reset') }}
+              >
+                Forget Password?
+              </button>
 
             </form>
           </div>
@@ -56,7 +64,7 @@ function Login() {
             </button>
 
             <Link
-            to='/accounts/emailsignup'
+              to='/accounts/emailsignup'
               className="w-full block rounded-full text-center text-blue-500 font-medium tracking-wider font-sans text-sm  hover:bg-gray-700 border border-blue-500 p-3 mb-5"
             >
               Create new account

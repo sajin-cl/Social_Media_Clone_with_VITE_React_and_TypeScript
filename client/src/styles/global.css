@@ -15,7 +15,6 @@
   body {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    background-color: #0c0a09;
   }
 
   html::-webkit-scrollbar,
