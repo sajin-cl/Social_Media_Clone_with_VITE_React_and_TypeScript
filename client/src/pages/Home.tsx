@@ -1,8 +1,11 @@
+
 function Home() {
   return (
-    <>
-      Feed
-    </>
+    <div className="bg-amber-400 ">
+      
+       Feed dsf
+   
+    </div>
   )
 };
 

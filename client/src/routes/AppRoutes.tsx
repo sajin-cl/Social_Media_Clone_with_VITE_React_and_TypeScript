@@ -13,18 +13,12 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-
-
-
-
-
-
-
-      /* Login & Register*/
-      { path: '/accounts/login', element: <Login /> },
-      { path: '/accounts/emailsignup', element: <Register /> },
-      { path: '/accounts/password/reset', element: <ForgetPassword /> },
-
     ],
   },
+
+  /* Login & Register*/
+  { path: '/accounts/login', element: <Login /> },
+  { path: '/accounts/emailsignup', element: <Register /> },
+  { path: '/accounts/password/reset', element: <ForgetPassword /> },
+
 ]);
