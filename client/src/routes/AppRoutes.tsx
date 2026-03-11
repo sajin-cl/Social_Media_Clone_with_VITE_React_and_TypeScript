@@ -1,6 +1,6 @@
 import App from '@/App';
 import ForgetPassword from '@/pages/ForgetPassword';
-import Home from '@/pages/Home';
+import Feed from '@/pages/Feed';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import { createBrowserRouter } from 'react-router-dom';
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Feed/> },
     ],
   },
 

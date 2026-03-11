@@ -3,7 +3,7 @@ import { stories } from "@/data/stories";
 import { useLayoutEffect, useRef } from "react";
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
 
-function Home() {
+function Feed() {
 
   const carouselRef = useRef<HTMLDivElement>(null);
   const scrollAmountRef = useRef(0);
@@ -25,23 +25,31 @@ function Home() {
   };
 
   return (
-    <div className="bg-darkbg min-h-screen  w-full">
-      <div className="relative">
+    <div className="bg-darkbg min-h-screen w-full">
+
+      {/* Stories section */}
+      <div className="relative stories-section">
         <div
           ref={carouselRef}
           className="flex gap-2 p-4 border-b border-gray-600 overflow-x-auto carousel-scrollbar-hide"
         >
+
+          {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
-            size={35}
-            className="absolute  left-0 top-10 bg-gray-300 rounded-full cursor-pointer z-10 p-2"
+            size={30}
+            className="absolute  left-0 top-10 text-pink-500 bg-gray-300 rounded-full cursor-pointer z-10 p-2"
             onClick={() => scroll('left')}
           />
+
+          {/*  Stories Component */}
           {stories.map((story) => (
             <Stories key={story.id} story={story} />
           ))}
+
+          {/* Right Arrow */}
           <MdKeyboardDoubleArrowRight
-            size={35}
-            className="absolute right-0 top-10  bg-gray-300 rounded-full cursor-pointer z-10 p-2"
+            size={30}
+            className="absolute right-0 top-10 text-pink-500 bg-gray-300 rounded-full cursor-pointer z-10 p-2"
             onClick={() => scroll('right')}
           />
         </div>
@@ -50,4 +58,4 @@ function Home() {
   )
 };
 
-export default Home;
+export default Feed;

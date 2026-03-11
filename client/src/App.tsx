@@ -8,12 +8,16 @@ function App() {
   return (
     <section className="flex min-h-screen">
       <Navbar />
+
       <div className="flex flex-1 justify-center min-w-0">
-        <div className="w-full max-w-2xl ">
+        <div className="w-full lg:max-w-2xl ">
           <Outlet />
         </div>
       </div>
-      <Suggestions />
+
+      <aside className="hidden lg:block lg:w-110 min-h-screen bg-darkbg py-3 px-3">
+        <Suggestions />
+      </aside>
     </section>
   );
 };
