@@ -1,11 +1,11 @@
-import type { FooterLinksType as FooterLinks, NavLinksType as NavLinks } from "@/types/indes.ts";
+import type { FooterLinks as FooterLinksType, NavLinks as NavLinksType } from "@/types/indes.ts";
 import { IoHomeOutline, IoSearchSharp, IoHeartOutline, IoStatsChart } from "react-icons/io5";
 import { RiYoutubeLine, RiTelegram2Line } from "react-icons/ri";
 import { MdOutlineExplore } from "react-icons/md";
 import { BsPlus } from "react-icons/bs";
 
 
-export const navLinks: NavLinks[] = [
+export const navLinks: NavLinksType[] = [
   { id: 1, name: 'Home', icon: IoHomeOutline },
   { id: 2, name: 'Reels', icon: RiYoutubeLine },
   { id: 3, name: 'Messaging', icon: RiTelegram2Line },
@@ -18,7 +18,7 @@ export const navLinks: NavLinks[] = [
 ];
 
 
-export const footerLinks: FooterLinks[] = [
+export const footerLinks: FooterLinksType[] = [
   { id: 1, name: 'Meta' },
   { id: 2, name: 'About' },
   { id: 3, name: 'Blog' },

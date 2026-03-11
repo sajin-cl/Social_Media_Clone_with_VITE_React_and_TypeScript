@@ -1,6 +1,6 @@
-import type { SuggestionsType as Suggestions } from "@/types/indes";
+import type {  Suggestions as SuggestionsType } from "@/types/indes";
 
-export const suggestions: Suggestions[] = [
+export const suggestions: SuggestionsType[] = [
   {
     id: 1,
     userName: "John Snow",

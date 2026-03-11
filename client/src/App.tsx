@@ -6,10 +6,12 @@ function App() {
 
 
   return (
-    <section className="flex">
+    <section className="flex min-h-screen">
       <Navbar />
-      <div className="max-w-2xl  mx-auto">
-        <Outlet />
+      <div className="flex flex-1 justify-center min-w-0">
+        <div className="w-full max-w-2xl ">
+          <Outlet />
+        </div>
       </div>
       <Suggestions />
     </section>

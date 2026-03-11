@@ -3,7 +3,7 @@ import { suggestions } from "@/data/suggestions";
 function Suggestions() {
 
   return (
-    <div className="w-100 min-h-screen bg-darkbg py-3 px-3">
+    <div className="w-110 min-h-screen bg-darkbg py-3 px-3">
 
       {/*Profile switch */}
       <div className="profile-section flex items-center p-3 gap-3 mb-6">
