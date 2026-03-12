@@ -24,7 +24,7 @@ function Navbar() {
 
       <div className="mt-auto py-3">
          <div className="flex gap-4 items-center py-2 mb-3">
-           <img src="https://i.pravatar.cc/150?img=3" alt="profile-image"  className="w-8 h-8 rounded-full border-2 border-pink-600"/>
+           <img src="/profile.webp" alt="profile-image"  className="w-8 h-8 rounded-full border-2 border-pink-600"/>
            <span className="text-white text-sm hidden group-hover:block">Profile</span>
          </div>
 

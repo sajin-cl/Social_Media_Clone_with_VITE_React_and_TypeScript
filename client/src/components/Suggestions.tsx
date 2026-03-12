@@ -8,7 +8,7 @@ function Suggestions() {
       {/*Profile switch */}
       <div className="profile-section flex items-center p-3 gap-3 mb-6">
         <img
-          src="https://i.pravatar.cc/150?img=3"
+          src="/profile.webp"
           alt="profile-image"
           className="w-11 h-11 rounded-full border-2 border-pink-600"
         />

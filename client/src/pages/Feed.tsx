@@ -25,19 +25,19 @@ function Feed() {
   };
 
   return (
-    <div className="bg-darkbg min-h-screen w-full">
+    <div className="bg-darkbg min-h-screen w-full flex justify-center">
 
       {/* Stories section */}
-      <div className="relative stories-section">
+      <div className="relative stories-section max-w-2xl">
         <div
           ref={carouselRef}
-          className="flex gap-2 p-4 border-b border-gray-600 overflow-x-auto carousel-scrollbar-hide"
+          className="flex gap-2 p-4 overflow-x-auto carousel-scrollbar-hide"
         >
 
           {/* Left Arrow */}
           <MdKeyboardDoubleArrowLeft
             size={30}
-            className="absolute  left-0 top-10 text-pink-500 bg-gray-300 rounded-full cursor-pointer z-10 p-2"
+            className=" absolute sm:left-[-20]  md:left-0 top-10 text-pink-500 bg-gray-300 rounded-full cursor-pointer z-10 p-2"
             onClick={() => scroll('left')}
           />
 

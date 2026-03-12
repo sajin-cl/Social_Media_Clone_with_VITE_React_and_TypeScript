@@ -4,7 +4,7 @@ export const stories: StoriesType[] = [
   {
     id: 0,
     userName: "sajin_cl",
-    avatar: "https://i.pravatar.cc/150?img=3",
+    avatar: "/profile.webp",
     storyImage: null,
     isViewed: false,
     isMyStory: true
