@@ -1,4 +1,4 @@
-import type { FooterLinks as FooterLinksType, NavLinks as NavLinksType } from "@/types/indes.ts";
+import type { FooterLinks as FooterLinksType, NavLinks as NavLinksType } from "@/types/model";
 import { IoHomeOutline, IoSearchSharp, IoHeartOutline, IoStatsChart } from "react-icons/io5";
 import { RiYoutubeLine, RiTelegram2Line } from "react-icons/ri";
 import { MdOutlineExplore } from "react-icons/md";

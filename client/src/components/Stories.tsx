@@ -1,4 +1,4 @@
-import type { Stories as StoriesType } from "@/types/indes";
+import type { Stories as StoriesType } from "@/types/model";
 
 type props = {
   story: StoriesType
@@ -12,7 +12,7 @@ function Stories({ story }: props) {
     <div className="story-card h-28 p-2 flex flex-col items-center shrink-0 ">
       <div className={`p-[3px] rounded-full ${borderColor}`}>
         <img
-          src={story.avatar}
+          src={story.userImage}
           alt={story.userName}
           className="w-16 h-16 rounded-full object-cover bg-white p-[1px]"
         />

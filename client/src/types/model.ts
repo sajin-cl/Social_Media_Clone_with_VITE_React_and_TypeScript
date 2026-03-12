@@ -21,8 +21,26 @@ export type Suggestions = {
 export type Stories = {
   id: number,
   userName: string,
-  avatar: string,
+  userImage: string,
   storyImage: string | null,
   isViewed: boolean,
   isMyStory?: boolean
+};
+
+export type Commment = {
+  id: number,
+  userName: string,
+  text: string
+}
+
+export type Posts = {
+  id: number,
+  userName: string,
+  userImage:string,
+  postImage: string,
+  caption: string,
+  likes: number,
+  shares:number,
+  comments: Commment[],
+  createdAt: string
 };

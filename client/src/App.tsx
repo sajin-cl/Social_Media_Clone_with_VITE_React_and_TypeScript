@@ -8,7 +8,7 @@ function App() {
   return (
     <section className="flex min-h-screen bg-darkbg">
       <nav
-        className="hidden md:block md:w-20 hover:w-48 min-h-screen border-r bg-darkbg p-5 group transition-all duration-400 z-50"
+        className="fixed bottom-0 md:bottom-auto md:top-0 hidden md:block md:w-20 hover:w-48 min-h-screen border-r bg-darkbg p-5 group transition-all duration-400 z-50"
       >
         <Navbar />
       </nav>

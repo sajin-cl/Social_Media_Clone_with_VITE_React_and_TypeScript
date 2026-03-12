@@ -1,5 +1,6 @@
 import Post from "@/components/Post";
 import Stories from "@/components/Stories";
+import  { posts } from "@/data/posts";
 import { stories } from "@/data/stories";
 import { useLayoutEffect, useRef } from "react";
 import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from 'react-icons/md';
@@ -57,8 +58,10 @@ function Feed() {
       </div>
 
       {/* Post Section */}
-      <div className="post-section h-[680px] w-[400px]  mb-5 overflow-hidden">
-        <Post />
+      <div className="post-section w-[400px]  mb-5  ">
+        {posts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </div>
 
     </div>
