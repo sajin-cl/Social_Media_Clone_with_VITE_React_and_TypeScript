@@ -1,3 +1,4 @@
+import Post from "@/components/Post";
 import Stories from "@/components/Stories";
 import { stories } from "@/data/stories";
 import { useLayoutEffect, useRef } from "react";
@@ -25,7 +26,7 @@ function Feed() {
   };
 
   return (
-    <div className="bg-darkbg min-h-screen w-full flex justify-center">
+    <div className="bg-darkbg min-h-screen w-full flex  items-center flex-col">
 
       {/* Stories section */}
       <div className="relative stories-section max-w-2xl">
@@ -54,6 +55,12 @@ function Feed() {
           />
         </div>
       </div>
+
+      {/* Post Section */}
+      <div className="post-section h-[680px] w-[400px]  mb-5 overflow-hidden">
+        <Post />
+      </div>
+
     </div>
   )
 };
