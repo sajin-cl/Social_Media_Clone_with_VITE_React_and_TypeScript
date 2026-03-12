@@ -49,7 +49,7 @@ function Profile() {
         </div>
 
         {/* Tabs */}
-        <div className="profile-tabs flex justify-between items-center gap-12 py-3 text-white">
+        <div className="profile-tabs flex justify-between items-center gap-12 p-3 text-white">
           <BsGrid3X3
             size={24}
             className={`cursor-pointer ${activeTab === "posts" ? "text-white" : "text-gray-400"}`}
