@@ -1,4 +1,5 @@
 import type { Stories as StoriesType } from "@/types/model";
+import { useNavigate } from "react-router-dom";
 
 type props = {
   story: StoriesType
@@ -6,10 +7,18 @@ type props = {
 
 function Stories({ story }: props) {
 
+  const navigate = useNavigate();
   const borderColor = story.isViewed ? "bg-gray-700" : "bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600";
-  
+
+  const openStory = () => {
+    navigate(`/story/${story.id}`)
+  };
+
   return (
-    <div className="story-card h-28 p-2 flex flex-col items-center shrink-0 ">
+    <div
+      onClick={openStory}
+      className="story-card h-28 p-2 flex flex-col items-center shrink-0"
+    >
       <div className={`p-[3px] rounded-full ${borderColor}`}>
         <img
           src={story.userImage}

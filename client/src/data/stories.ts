@@ -5,7 +5,7 @@ export const stories: StoriesType[] = [
     id: 0,
     userName: "sajin_cl",
     userImage: "/profile.webp",
-    storyImage: null,
+    storyImage: "https://picsum.photos/400/700?random=0",
     isViewed: false,
     isMyStory: true
   }

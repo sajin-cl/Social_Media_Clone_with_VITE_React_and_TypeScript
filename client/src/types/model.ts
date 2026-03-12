@@ -22,7 +22,7 @@ export type Stories = {
   id: number,
   userName: string,
   userImage: string,
-  storyImage: string | null,
+  storyImage: string ,
   isViewed: boolean,
   isMyStory?: boolean
 };
