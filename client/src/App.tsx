@@ -1,10 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Suggestions from "@/components/Suggestions";
 
 function App() {
 
-
+  const locaion = useLocation();
   return (
     <section className="flex min-h-screen bg-darkbg">
       <nav
@@ -19,9 +19,12 @@ function App() {
         </div>
       </div>
 
-      <aside className="hidden xl:block xl:w-110 min-h-screen bg-darkbg py-3 px-3 z-40">
-        <Suggestions />
-      </aside>
+      {locaion.pathname === '/' && (
+        <aside className="hidden xl:block xl:w-110 min-h-screen bg-darkbg py-3 px-3 z-40">
+          <Suggestions />
+        </aside>
+      )}
+
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import { suggestions } from "@/data/suggestions";
+import { Link } from "react-router-dom";
 
 function Suggestions() {
 
@@ -6,7 +7,9 @@ function Suggestions() {
     <>
 
       {/*Profile switch */}
-      <div className="profile-section flex items-center p-3 gap-3 mb-6">
+      <Link 
+      to={'/profile'}
+      className="profile-section flex items-center p-3 gap-3 mb-6">
         <img
           src="/profile.webp"
           alt="profile-image"
@@ -19,7 +22,7 @@ function Suggestions() {
         <div className="switch-btn mx-auto">
           <a href="#" className="text-blue-800 font-semibold text-sm hover:underline">Switch</a>
         </div>
-      </div>
+      </Link>
 
       <div className="suggestion-all flex items-center p-3">
         <p className="text-sm text-white font-semibold w-45">Suggested for you</p>

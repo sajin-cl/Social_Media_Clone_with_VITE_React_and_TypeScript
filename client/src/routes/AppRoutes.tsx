@@ -5,6 +5,7 @@ import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import { createBrowserRouter } from 'react-router-dom';
 import ViewStory from '@/components/ViewStory';
+import Profile from '@/pages/Profile';
 
 
 
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Feed /> },
+      { path: 'profile', element: <Profile /> },
     ],
   },
   { path: '/story/:id', element: <ViewStory /> },

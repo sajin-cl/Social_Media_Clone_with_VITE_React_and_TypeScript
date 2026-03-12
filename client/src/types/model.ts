@@ -8,7 +8,8 @@ export type FooterLinks = {
 export type NavLinks = {
   id: number,
   icon: IconType,
-  name: string
+  name: string,
+  href: string
 };
 
 export type Suggestions = {
@@ -22,7 +23,7 @@ export type Stories = {
   id: number,
   userName: string,
   userImage: string,
-  storyImage: string ,
+  storyImage: string,
   isViewed: boolean,
   isMyStory?: boolean
 };
@@ -36,11 +37,16 @@ export type Commment = {
 export type Posts = {
   id: number,
   userName: string,
-  userImage:string,
+  userImage: string,
   postImage: string,
   caption: string,
   likes: number,
-  shares:number,
+  shares: number,
   comments: Commment[],
   createdAt: string
+};
+
+export type MyPosts = {
+  id: number,
+  image: string
 };
