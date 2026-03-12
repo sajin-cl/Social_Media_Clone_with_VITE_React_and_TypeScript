@@ -1,15 +1,18 @@
 import { HiDotsHorizontal } from "react-icons/hi";
-import { IoHeartOutline } from "react-icons/io5";
+import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { FaRegComment, FaRegBookmark } from "react-icons/fa";
 import { RiTelegram2Line } from "react-icons/ri";
 import type { Posts } from "@/types/model";
+import { useState } from "react";
 
 type PostProps = {
   post: Posts
 }
 
-
 function Post({ post }: PostProps) {
+
+  const [follow, setFollow] = useState(true);
+  const [like, setLike] = useState(true);
 
   return (
     <div className="post-container py-3">
@@ -29,7 +32,12 @@ function Post({ post }: PostProps) {
           </div>
         </div>
         <div className="buttons flex items-center gap-2">
-          <button className="text-sm text-blue-500">Follow</button>
+          <button
+            className={`text-sm ${follow ? " text-blue-500" : "text-gray-300"} `}
+            onClick={() => setFollow(!follow)}
+          >
+            {follow ? "Follow" : "Following"}
+          </button>
           <HiDotsHorizontal color="white" />
         </div>
       </div>
@@ -50,9 +58,19 @@ function Post({ post }: PostProps) {
           <div className="flex gap-3">
 
             {/* LIkes */}
-            <div className="flex items-center gap-1">
-              <IoHeartOutline size={28} className="text-gray-200 cursor-pointer" />
-              <span className="text-white text-xs">{post?.likes}</span>
+            <div
+              className="flex items-center gap-1 cursor-pointer"
+              onClick={() => setLike(!like)}
+            >
+              {like ? (
+                <IoHeart size={28} className="text-red-500" />
+              ) : (
+                <IoHeartOutline size={28} className="text-gray-200" />
+              )}
+
+              <span className="text-white text-xs">
+                {post?.likes}
+              </span>
             </div>
 
             {/* comments */}
@@ -76,7 +94,7 @@ function Post({ post }: PostProps) {
         <div className="user-post-captions py-3 flex items-center">
           <span className="text-white text-sm mr-3">{post?.userName}</span>
           <span className="text-sm text-gray-300 max-w-[250px] truncate inline-block">
-           {post?.caption}
+            {post?.caption}
           </span>
         </div>
 
